@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Lab_06_1_iter.vcxproj" Id="50a7246b-950d-5cb3-ba1c-f14245ffe3f7" />
+  <Project Path="Lab_06_1_rec.vcxproj" Id="26487172-0e44-5d30-b315-a8073b818e14" />
+  <Project Path="Lab_06_2_iter.vcxproj" Id="2596914a-0021-598d-a55a-f113a6038dc1" />
+  <Project Path="Lab_06_2_rec.vcxproj" Id="5933bb53-d31f-5393-a2f5-fe9f92ca1b67" />
+  <Project Path="Lab_06_3_iter.vcxproj" Id="429ca207-5d58-5608-9def-3abe181c2427" />
+  <Project Path="Lab_06_3_rec.vcxproj" Id="b7b1d88c-d558-5933-bb57-8b4ba0f6fcf5" />
+  <Project Path="Lab_06_4_iter.vcxproj" Id="65302b80-a4a7-5010-907e-fa71037e00d0" />
+  <Project Path="Lab_06_4_rec.vcxproj" Id="eb737d09-6b87-5e0a-aa21-ee213da08b2e" />
+  <Project Path="UnitTest_06_1.vcxproj" Id="7265219a-fe30-5210-bd32-0b7fc78c854c" />
+  <Project Path="UnitTest_06_2.vcxproj" Id="ec003aad-4db7-549d-a39f-3a202de726e5" />
+  <Project Path="UnitTest_06_3.vcxproj" Id="e367503c-3575-5497-982d-cdbc8cf0f779" />
+  <Project Path="UnitTest_06_4.vcxproj" Id="ffd4eaae-a62d-5f5f-bb1e-fb69fce45e46" />
+</Solution>
