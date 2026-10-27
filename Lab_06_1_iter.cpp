@@ -26,13 +26,19 @@ void Print(const int* r, const int size)
     cout << endl;
 }
 
+// Критерій: всі додатні, крім кратних 4
+bool Criterion(int element)
+{
+    return (element > 0 && element % 4 != 0);
+}
+
 // Обчислення кількості елементів, що задовольняють критерію
 int Count(const int* r, const int size)
 {
     int count = 0;
     for (int i = 0; i < size; i++)
     {
-        if (r[i] > 0 && r[i] % 4 != 0)
+        if (Criterion(r[i]))
             count++;
     }
     return count;
@@ -44,7 +50,7 @@ int Sum(const int* r, const int size)
     int sum = 0;
     for (int i = 0; i < size; i++)
     {
-        if (r[i] > 0 && r[i] % 4 != 0)
+        if (Criterion(r[i]))
             sum += r[i];
     }
     return sum;
@@ -55,7 +61,7 @@ void Replace(int* r, const int size)
 {
     for (int i = 0; i < size; i++)
     {
-        if (r[i] > 0 && r[i] % 4 != 0)
+        if (Criterion(r[i]))
             r[i] = 0;
     }
 }

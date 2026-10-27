@@ -32,12 +32,18 @@ void Print(const int* r, const int size, int i = 0)
     Print(r, size, i + 1);
 }
 
+// Критерій: всі додатні, крім кратних 4
+bool Criterion(int element)
+{
+    return (element > 0 && element % 4 != 0);
+}
+
 // Рекурсивне обчислення кількості елементів
 int Count(const int* r, const int size, int i = 0)
 {
     if (i >= size)
         return 0;
-    return ((r[i] > 0 && r[i] % 4 != 0) ? 1 : 0) + Count(r, size, i + 1);
+    return (Criterion(r[i]) ? 1 : 0) + Count(r, size, i + 1);
 }
 
 // Рекурсивне обчислення суми елементів
@@ -45,7 +51,7 @@ int Sum(const int* r, const int size, int i = 0)
 {
     if (i >= size)
         return 0;
-    return ((r[i] > 0 && r[i] % 4 != 0) ? r[i] : 0) + Sum(r, size, i + 1);
+    return (Criterion(r[i]) ? r[i] : 0) + Sum(r, size, i + 1);
 }
 
 // Рекурсивна заміна нулями елементів
@@ -53,7 +59,7 @@ void Replace(int* r, const int size, int i = 0)
 {
     if (i >= size)
         return;
-    if (r[i] > 0 && r[i] % 4 != 0)
+    if (Criterion(r[i]))
         r[i] = 0;
     Replace(r, size, i + 1);
 }
