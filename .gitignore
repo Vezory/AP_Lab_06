@@ -9,3 +9,5 @@ x64/
 Debug/
 Release/
 
+# Word reports (keep local only)
+*.docx
