@@ -11,25 +11,19 @@
 
 using namespace std;
 
-// Формування масиву випадковими числами з діапазону [Low, High]
+// Формування масиву випадковими числами в діапазоні [Low, High]
 void Create(int* r, const int size, const int Low, const int High)
 {
     for (int i = 0; i < size; i++)
         r[i] = Low + rand() % (High - Low + 1);
 }
 
-// Форматне виведення масиву у вигляді рядка
+// Виведення масиву в консоль
 void Print(const int* r, const int size)
 {
     for (int i = 0; i < size; i++)
         cout << setw(4) << r[i];
     cout << endl;
-}
-
-// Критерій: всі додатні, крім кратних 4
-bool Criterion(int element)
-{
-    return (element > 0 && element % 4 != 0);
 }
 
 // Обчислення кількості елементів, що задовольняють критерію
@@ -38,7 +32,7 @@ int Count(const int* r, const int size)
     int count = 0;
     for (int i = 0; i < size; i++)
     {
-        if (Criterion(r[i]))
+        if (r[i] > 0 && r[i] % 4 != 0)
             count++;
     }
     return count;
@@ -50,7 +44,7 @@ int Sum(const int* r, const int size)
     int sum = 0;
     for (int i = 0; i < size; i++)
     {
-        if (Criterion(r[i]))
+        if (r[i] > 0 && r[i] % 4 != 0)
             sum += r[i];
     }
     return sum;
@@ -61,7 +55,7 @@ void Replace(int* r, const int size)
 {
     for (int i = 0; i < size; i++)
     {
-        if (Criterion(r[i]))
+        if (r[i] > 0 && r[i] % 4 != 0)
             r[i] = 0;
     }
 }
@@ -96,4 +90,3 @@ int main()
     return 0;
 }
 #endif
-

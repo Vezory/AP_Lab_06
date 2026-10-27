@@ -11,7 +11,7 @@
 
 using namespace std;
 
-// Рекурсивне формування масиву випадковими числами з діапазону [Low, High]
+// Рекурсивне формування масиву випадковими числами в діапазоні [Low, High]
 void Create(int* r, const int size, const int Low, const int High, int i = 0)
 {
     if (i >= size)
@@ -32,18 +32,12 @@ void Print(const int* r, const int size, int i = 0)
     Print(r, size, i + 1);
 }
 
-// Критерій: всі додатні, крім кратних 4
-bool Criterion(int element)
-{
-    return (element > 0 && element % 4 != 0);
-}
-
 // Рекурсивне обчислення кількості елементів
 int Count(const int* r, const int size, int i = 0)
 {
     if (i >= size)
         return 0;
-    return (Criterion(r[i]) ? 1 : 0) + Count(r, size, i + 1);
+    return ((r[i] > 0 && r[i] % 4 != 0) ? 1 : 0) + Count(r, size, i + 1);
 }
 
 // Рекурсивне обчислення суми елементів
@@ -51,15 +45,15 @@ int Sum(const int* r, const int size, int i = 0)
 {
     if (i >= size)
         return 0;
-    return (Criterion(r[i]) ? r[i] : 0) + Sum(r, size, i + 1);
+    return ((r[i] > 0 && r[i] % 4 != 0) ? r[i] : 0) + Sum(r, size, i + 1);
 }
 
-// Рекурсивна заміна нулями відповідних елементів
+// Рекурсивна заміна нулями елементів
 void Replace(int* r, const int size, int i = 0)
 {
     if (i >= size)
         return;
-    if (Criterion(r[i]))
+    if (r[i] > 0 && r[i] % 4 != 0)
         r[i] = 0;
     Replace(r, size, i + 1);
 }
@@ -94,4 +88,3 @@ int main()
     return 0;
 }
 #endif
-
