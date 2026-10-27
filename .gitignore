@@ -1,0 +1,10 @@
+# Visual Studio temporary and build files
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.user
+.vs/
+x64/
+Debug/
+Release/
