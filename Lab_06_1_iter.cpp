@@ -26,10 +26,10 @@ void Print(const int* r, const int size)
     cout << endl;
 }
 
-// Критерій: всі додатні, крім кратних 4
+// Критерій: всі додатні, крім кратних 4 (буквальне виконання умови: додатні && !(кратні 4))
 bool Criterion(int element)
 {
-    return (element > 0 && element % 4 != 0);
+    return element > 0 && !(element % 4 == 0);
 }
 
 // Обчислення кількості елементів, що задовольняють критерію
